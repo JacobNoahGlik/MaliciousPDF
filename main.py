@@ -31,7 +31,7 @@ writer = PdfWriter()
 page = create_page(500, 500)
 page.Contents = PdfDict()
 page.AA = PdfDict()
-page.AA.o = create_script("app.alert('hi)")
+# page.AA.o = create_script("app.alert('hi)")
 with open("./code.js", "r") as f:
     page.AA.O = create_script(f.read())
 writer.addpage(page)
